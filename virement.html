@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+    <html lang="fr">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link rel="stylesheet" href="style.css">
+        <title>Virement - BMCE</title>
+    </head>
+    <body>
+        <header>
+            <h1>Virement</h1>
+        </header>
+        <main>
+            <h2>Informations du compte</h2>
+            <p>Titulaire : Véronique Dupret</p>
+            <p>Solde : 2.500.000 €</p>
+            
+            <h2>Effectuer un virement</h2>
+            <form id="transfer-form">
+                <label for="recipient-email">Email du destinataire :</label>
+                <input type="email" id="recipient-email" required>
+                
+                <label for="amount">Montant à virer :</label>
+                <input type="number" id="amount" required>
+                
+                <button type="submit">Effectuer le virement</button>
+            </form>
+        </main>
+        <footer>
+            <p>© 2024 BMCE. Tous droits réservés.</p>
+        </footer>
+        <script>
+            document.getElementById('transfer-form').onsubmit = function(event) {
+                event.preventDefault();
+                // Simuler l'envoi de l'email (à remplacer par une intégration backend)
+                alert('Virement effectué avec succès. Un avis a été envoyé au destinataire.');
+            };
+        </script>
+    </body>
+    </html>
